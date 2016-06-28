@@ -16,21 +16,21 @@ class ThirdViewController: UIViewController {
         self.view.backgroundColor = UIColor.darkGrayColor()
 
         
-        let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(140, 100, 100, 50)
-        btn.backgroundColor = UIColor.blackColor()
-        btn.setTitle("次へ", forState: .Normal)
-        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(btn)
+//        let btn: UIButton = UIButton()
+//        btn.frame = CGRectMake(140, 100, 100, 50)
+//        btn.backgroundColor = UIColor.blackColor()
+//        btn.setTitle("次へ", forState: .Normal)
+//        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
+//        self.view.addSubview(btn)
 
         // Do any additional setup after loading the view.
     }
     
-    func gotoNext(sender: UIButton){
-        
-        let secondView: ViewController = ViewController()
-        self.navigationController!.pushViewController(secondView, animated: true)
-    }
+//    func gotoNext(sender: UIButton){
+//        
+//        let secondView: ViewController = ViewController()
+//        self.navigationController!.pushViewController(secondView, animated: true)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -17,6 +17,8 @@
 		5947BCC61D20E5D9007334C5 /* WorkingCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCC51D20E5D9007334C5 /* WorkingCarUITests.swift */; };
 		5947BCD41D219AE9007334C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCD31D219AE9007334C5 /* SecondViewController.swift */; };
 		594A5EE71D22227F00A84CBD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A5EE61D22227F00A84CBD /* ThirdViewController.swift */; };
+		594A5EE91D22CA7500A84CBD /* ZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A5EE81D22CA7500A84CBD /* ZeroViewController.swift */; };
+		594A5EEB1D22D3E500A84CBD /* 素材.png in Resources */ = {isa = PBXBuildFile; fileRef = 594A5EEA1D22D3E500A84CBD /* 素材.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		5947BCC71D20E5D9007334C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5947BCD31D219AE9007334C5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		594A5EE61D22227F00A84CBD /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		594A5EE81D22CA7500A84CBD /* ZeroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroViewController.swift; sourceTree = "<group>"; };
+		594A5EEA1D22D3E500A84CBD /* 素材.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "素材.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 		5947BCA11D20E5D9007334C5 /* WorkingCar */ = {
 			isa = PBXGroup;
 			children = (
+				594A5EEA1D22D3E500A84CBD /* 素材.png */,
 				5947BCA21D20E5D9007334C5 /* AppDelegate.swift */,
+				594A5EE81D22CA7500A84CBD /* ZeroViewController.swift */,
 				5947BCA41D20E5D9007334C5 /* ViewController.swift */,
 				5947BCD31D219AE9007334C5 /* SecondViewController.swift */,
 				594A5EE61D22227F00A84CBD /* ThirdViewController.swift */,
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5947BCB01D20E5D9007334C5 /* LaunchScreen.storyboard in Resources */,
+				594A5EEB1D22D3E500A84CBD /* 素材.png in Resources */,
 				5947BCAD1D20E5D9007334C5 /* Assets.xcassets in Resources */,
 				5947BCA81D20E5D9007334C5 /* Main.storyboard in Resources */,
 			);
@@ -269,6 +276,7 @@
 				5947BCAB1D20E5D9007334C5 /* WorkingCar.xcdatamodeld in Sources */,
 				594A5EE71D22227F00A84CBD /* ThirdViewController.swift in Sources */,
 				5947BCA51D20E5D9007334C5 /* ViewController.swift in Sources */,
+				594A5EE91D22CA7500A84CBD /* ZeroViewController.swift in Sources */,
 				5947BCA31D20E5D9007334C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

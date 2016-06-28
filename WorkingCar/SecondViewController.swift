@@ -23,15 +23,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         tableview.dataSource = self
         tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(tableview)
-        
-//        let btn: UIButton = UIButton()
-//        btn.frame = CGRectMake(140, 100, 100, 100)
-//        btn.backgroundColor = UIColor.blackColor()
-//        btn.setTitle("次へ", forState: .Normal)
-//        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
-//        self.view.addSubview(btn)
 
-        //表示データ
              // Do any additional setup after loading the view.
     }
     

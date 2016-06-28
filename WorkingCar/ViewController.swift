@@ -41,8 +41,8 @@ class ViewController: UIViewController {
     
     func gotoThird(sender: UIButton){
         
-        let secondView: ThirdViewController = ThirdViewController()
-        self.navigationController!.pushViewController(secondView, animated: true)
+        let ThirdView: ThirdViewController = ThirdViewController()
+        self.navigationController!.pushViewController(ThirdView, animated: true)
     }
     
     
