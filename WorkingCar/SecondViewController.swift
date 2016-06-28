@@ -8,23 +8,31 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
+    let tableview: UITableView = UITableView()
+    var items:[String] = ["あ行","か行","さ行","た行","な行","は行","ま行","や行"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.greenColor()
+        //self.view.backgroundColor = UIColor.greenColor()
         
-        let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(140, 100, 100, 100)
-        btn.backgroundColor = UIColor.blackColor()
-        btn.setTitle("次へ", forState: .Normal)
-        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(btn)
-
+        tableview.frame = CGRectMake(0, 50, 320, 500)
+        tableview.delegate   = self
+        tableview.dataSource = self
+        tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.view.addSubview(tableview)
         
+//        let btn: UIButton = UIButton()
+//        btn.frame = CGRectMake(140, 100, 100, 100)
+//        btn.backgroundColor = UIColor.blackColor()
+//        btn.setTitle("次へ", forState: .Normal)
+//        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
+//        self.view.addSubview(btn)
 
-        // Do any additional setup after loading the view.
+        //表示データ
+             // Do any additional setup after loading the view.
     }
     
     func gotoNext(sender: UIButton){
@@ -38,7 +46,21 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //データの個数を返すメソッド
+    func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
+        return self.items.count
+    }
 
+    //データを返すメソッド（スクロールなどでページを更新する必要が出るたびに呼び出される）
+    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
+        cell.textLabel?.text = items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("\(indexPath.row)")
+    }
     /*
     // MARK: - Navigation
 
