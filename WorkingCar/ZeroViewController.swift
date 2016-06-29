@@ -10,6 +10,8 @@ import UIKit
 
 class ZeroViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,6 +83,12 @@ class ZeroViewController: UIViewController {
 //                // 再度アニメーションを起動
 //                self.animateImage(target)
 //        })
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        animateImage(imageView)
 //    }
 
     override func didReceiveMemoryWarning() {

@@ -8,35 +8,43 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    var collectionView:UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.darkGrayColor()
-
+        //self.view.backgroundColor = UIColor.whiteColor()
         
-//        let btn: UIButton = UIButton()
-//        btn.frame = CGRectMake(140, 100, 100, 50)
-//        btn.backgroundColor = UIColor.blackColor()
-//        btn.setTitle("次へ", forState: .Normal)
-//        btn.addTarget(self, action: "gotoNext:", forControlEvents: .TouchUpInside)
-//        self.view.addSubview(btn)
-
-        // Do any additional setup after loading the view.
-    }
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .Vertical
+        flowLayout.minimumInteritemSpacing = 5.0
+        flowLayout.minimumLineSpacing = 5.0
+        flowLayout.itemSize = CGSizeMake(100, 100)
+        
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
+        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        view.addSubview(collectionView)
+        }
     
-//    func gotoNext(sender: UIButton){
-//        
-//        let secondView: ViewController = ViewController()
-//        self.navigationController!.pushViewController(secondView, animated: true)
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        cell.backgroundColor = UIColor.whiteColor()
+        return cell
+    }
 
     /*
     // MARK: - Navigation
