@@ -10,24 +10,30 @@ import UIKit
 
 class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
     
-    var collectionView:UICollectionView!
+    @IBOutlet weak var myCollection: UICollectionView!
+    
+    //var image = UIImage()
+    
+    
+    var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor.whiteColor()
+        
         
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .Vertical
-        flowLayout.minimumInteritemSpacing = 5.0
-        flowLayout.minimumLineSpacing = 5.0
-        flowLayout.itemSize = CGSizeMake(100, 100)
+//        flowLayout.scrollDirection = .Vertical
+//        flowLayout.minimumInteritemSpacing = 5.0
+//        flowLayout.minimumLineSpacing = 5.0
+//        flowLayout.itemSize = CGSizeMake(105, 150)
         
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        view.addSubview(collectionView)
+        myCollection = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
+        myCollection.registerClass(CustomCell.self, forCellWithReuseIdentifier: "cell")
+        myCollection.dataSource = self
+        myCollection.delegate = self
+        view.addSubview(myCollection)
         }
     
     override func didReceiveMemoryWarning() {
@@ -35,14 +41,22 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     }
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return working_car_Image.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell : CustomCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCell
+        
+//        cell.title.text = "Working!";
+        cell.working_car_Image.image = UIImage(named: "000.png")
         cell.backgroundColor = UIColor.whiteColor()
+    
         return cell
     }
 

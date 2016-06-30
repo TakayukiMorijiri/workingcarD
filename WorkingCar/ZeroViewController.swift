@@ -37,7 +37,7 @@ class ZeroViewController: UIViewController {
         let btn: UIButton = UIButton()
         btn.frame = CGRectMake(60, 500, 200, 50)
         btn.backgroundColor = UIColor.orangeColor()
-        btn.setTitle("開く", forState: .Normal)
+        btn.setTitle("ひらく", forState: .Normal)
         btn.addTarget(self, action: "gotoView:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
     }
@@ -61,6 +61,10 @@ class ZeroViewController: UIViewController {
         // UIImageViewのインスタンスをビューに追加
         self.view.addSubview(imageView)
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
     }
     
 //    func animatedImage(target:UIImage){

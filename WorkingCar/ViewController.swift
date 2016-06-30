@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.view.backgroundColor = UIColor.whiteColor()
+        self.navigationController?.navigationBarHidden = false
         
         let btn: UIButton = UIButton()
         btn.frame = CGRectMake(60, 100, 200, 50)
