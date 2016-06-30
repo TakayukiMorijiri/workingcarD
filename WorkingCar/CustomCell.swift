@@ -13,12 +13,19 @@ class CustomCell: UICollectionViewCell {
      var working_car_Image: UIImageView!
     
     override init(frame: CGRect){
+        print(frame.size)
         super.init(frame: frame)
-        let hoge = UIImage(named: "001.pmg")
-        working_car_Image = UIImageView(image: hoge)
+        let hoge = UIImage(named: "000.png")
+        self.working_car_Image = UIImageView(image: hoge)
+        self.addSubview(working_car_Image)
+        self.title = UILabel()
+        self.title.text = "shokika"
+        self.title.frame = CGRectMake(frame.size.width / 2-100/4, 0, 100, 200)
+        self.addSubview(title)
     }
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
+        
     }
     
     

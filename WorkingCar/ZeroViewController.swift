@@ -10,12 +10,14 @@ import UIKit
 
 class ZeroViewController: UIViewController {
 
-    @IBOutlet weak var myImageView: UIImageView!
+    //@IBOutlet weak var myImageView: UIImageView!
+    
+    var myImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //initImageView()
+        initImageView()
         
         // Do any additional setup after loading the view.
         
@@ -48,29 +50,32 @@ class ZeroViewController: UIViewController {
         self.navigationController!.pushViewController(viewController, animated: true)
     }
     
-//    func initImageView(){
-//        // UIImage インスタンスの生成
-//        var image1:UIImage? = UIImage(named:"素材.png")
-//        
-//        // UIImageView 初期化
-//        let imageView = UIImageView(image:image1)
-//        
-//        // 画像の中心を設定
-//        imageView.center = CGPointMake(187.5, 333.5)
-//        
-//        // UIImageViewのインスタンスをビューに追加
-//        self.view.addSubview(imageView)
-//        
-//    }
+    func initImageView(){
+        myImageView = UIImageView(frame: CGRectMake(0,0,100,200))
+        
+        // UIImage インスタンスの生成
+        var image1:UIImage? = UIImage(named:"素材.png")
+        
+        // UIImageView 初期化
+        let imageView = UIImageView(image:image1)
+        
+        // 画像の中心を設定
+        //imageView.center = CGPointMake(187.5, 333.5)
+        
+        // UIImageViewのインスタンスをビューに追加
+        self.view.addSubview(imageView)
+        self.view.addSubview(myImageView)
+        
+    }
     
     func animatedImage(target:UIView?){
-        let timePerSecond = 30.0 / view.bounds.size.width
+        let timePerSecond = 10.0 / view.bounds.size.width
         
         // 画像の位置から画面右までにかかる時間の計算
         let remainTime = (view.bounds.size.width - target!.frame.origin.x) * timePerSecond
         
         // アニメーション
-        UIView.transitionWithView(target!, duration: NSTimeInterval( remainTime), options: .CurveLinear, animations: { () -> Void in
+        UIView.transitionWithView(target!, duration: 2, options: .CurveLinear, animations: { () -> Void in
             
             // 画面右まで移動
             target!.frame.origin.x = self.view.bounds.width
@@ -88,7 +93,8 @@ class ZeroViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //animatedImage(UIView?)
+        
+        animatedImage(self.myImageView)
     }
 
     override func viewWillAppear(animated: Bool) {

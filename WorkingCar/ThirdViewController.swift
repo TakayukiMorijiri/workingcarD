@@ -67,7 +67,8 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
 //        cell.image.image = UIImage(named: "000.png")
         
-        cell.working_car_Image = UIImageView(image: UIImage(named: "001.png"))
+        
+        cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
 //        cell.title.text = "hoge"
         cell.backgroundColor = UIColor.whiteColor()
         cell.layer.borderWidth = 0.5
