@@ -9,11 +9,13 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var working_car_Image: UIImageView!
+     var title: UILabel!
+     var working_car_Image: UIImageView!
     
     override init(frame: CGRect){
         super.init(frame: frame)
+        let hoge = UIImage(named: "001.pmg")
+        working_car_Image = UIImageView(image: hoge)
     }
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!

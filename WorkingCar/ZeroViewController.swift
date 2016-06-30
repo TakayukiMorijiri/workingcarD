@@ -15,7 +15,7 @@ class ZeroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initImageView()
+        //initImageView()
         
         // Do any additional setup after loading the view.
         
@@ -48,53 +48,53 @@ class ZeroViewController: UIViewController {
         self.navigationController!.pushViewController(viewController, animated: true)
     }
     
-    func initImageView(){
-        // UIImage インスタンスの生成
-        let image1:UIImage? = UIImage(named:"素材.png")
+//    func initImageView(){
+//        // UIImage インスタンスの生成
+//        var image1:UIImage? = UIImage(named:"素材.png")
+//        
+//        // UIImageView 初期化
+//        let imageView = UIImageView(image:image1)
+//        
+//        // 画像の中心を設定
+//        imageView.center = CGPointMake(187.5, 333.5)
+//        
+//        // UIImageViewのインスタンスをビューに追加
+//        self.view.addSubview(imageView)
+//        
+//    }
+    
+    func animatedImage(target:UIView?){
+        let timePerSecond = 30.0 / view.bounds.size.width
         
-        // UIImageView 初期化
-        let imageView = UIImageView(image:image1)
+        // 画像の位置から画面右までにかかる時間の計算
+        let remainTime = (view.bounds.size.width - target!.frame.origin.x) * timePerSecond
         
-        // 画像の中心を設定
-        imageView.center = CGPointMake(187.5, 333.5)
-        
-        // UIImageViewのインスタンスをビューに追加
-        self.view.addSubview(imageView)
-        
+        // アニメーション
+        UIView.transitionWithView(target!, duration: NSTimeInterval( remainTime), options: .CurveLinear, animations: { () -> Void in
+            
+            // 画面右まで移動
+            target!.frame.origin.x = self.view.bounds.width
+            
+            }, completion: { _ in
+                
+                // 画面右まで行ったら、画面左に戻す
+                target!.frame.origin.x = -target!.bounds.size.width
+                
+                // 再度アニメーションを起動
+                self.animatedImage(target)
+        })
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //animatedImage(UIView?)
+    }
+
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
     }
     
-//    func animatedImage(target:UIImage){
-//        let timePerSecond = 30.0 / view.bounds.size.width
-//        
-//        // 画像の位置から画面右までにかかる時間の計算
-//        let remainTime = (view.bounds.size.width - target.frame.origin.x) * timePerSecond
-//        
-//        // アニメーション
-//        UIView.transitionWithView(target, duration: NSTimeInterval( remainTime), options: .CurveLinear, animations: { () -> Void in
-//            
-//            // 画面右まで移動
-//            target.frame.origin.x = self.view.bounds.width
-//            
-//            }, completion: { _ in
-//                
-//                // 画面右まで行ったら、画面左に戻す
-//                target.frame.origin.x = -target.bounds.size.width
-//                
-//                // 再度アニメーションを起動
-//                self.animateImage(target)
-//        })
-//    }
-//    
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        animateImage(imageView)
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

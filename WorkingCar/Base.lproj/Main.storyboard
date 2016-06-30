@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axw-2l-QbY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="素材.png" translatesAutoresizingMaskIntoConstraints="NO" id="axw-2l-QbY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="-225" y="481"/>
         </scene>
-        <!--Third View Controller-->
+        <!--View Controller-->
         <scene sceneID="iP4-QA-WYu">
             <objects>
-                <viewController id="hvy-4d-XuF" customClass="ThirdViewController" customModule="WorkingCar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hvy-4d-XuF" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eab-ZK-wOW"/>
                         <viewControllerLayoutGuide type="bottom" id="DcC-r2-cXO"/>
@@ -72,10 +72,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <connections>
-                                            <outlet property="title" destination="YQk-UR-kUM" id="dyA-iP-QI1"/>
-                                            <outlet property="working_car_Image" destination="WEn-Zh-1R3" id="q9T-Vy-Ngz"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -96,4 +92,7 @@
             <point key="canvasLocation" x="261" y="481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="素材.png" width="1024" height="1024"/>
+    </resources>
 </document>
