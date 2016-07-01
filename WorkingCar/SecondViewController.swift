@@ -16,8 +16,6 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor.greenColor()
-        
         tableview.frame = CGRectMake(0, 50, 320, 500)
         tableview.delegate   = self
         tableview.dataSource = self
@@ -38,12 +36,10 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
-    //データの個数を返すメソッド
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
         return self.items.count
     }
 
-    //データを返すメソッド（スクロールなどでページを更新する必要が出るたびに呼び出される）
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
         cell.textLabel?.text = items[indexPath.row]
@@ -51,6 +47,11 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let detailVC:DetailViewController = DetailViewController()
+        self.presentViewController(detailVC, animated: true, completion: nil)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         print("\(indexPath.row)")
     }
     /*

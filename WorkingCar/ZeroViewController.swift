@@ -42,6 +42,17 @@ class ZeroViewController: UIViewController {
         btn.setTitle("ひらく", forState: .Normal)
         btn.addTarget(self, action: "gotoView:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
+        
+//        let testView: UIView = UIView()
+//        testView.backgroundColor = UIColor.redColor()
+//        testView.frame = CGRectMake(0, 199, 100, 100)
+//        self.view.addSubview(testView)
+//        UIView.transitionWithView(testView, duration: 2, options: .CurveLinear, animations: { () -> Void in
+//            testView.frame.origin.x = 400
+//            }, completion: { _ in
+//                testView.frame.origin.x = 0
+//                self.animatedImage(testView)
+//        })
     }
     
     func gotoView(sender: UIButton){
@@ -64,7 +75,20 @@ class ZeroViewController: UIViewController {
         
         // UIImageViewのインスタンスをビューに追加
         self.view.addSubview(imageView)
-        self.view.addSubview(myImageView)
+        
+        UIView.transitionWithView(imageView, duration: 30, options: .CurveLinear, animations: { () -> Void in
+            
+            // 画面右まで移動
+            imageView.frame.origin.x = self.view.bounds.width
+            
+            }, completion: { _ in
+                
+                // 画面右まで行ったら、画面左に戻す
+                imageView.frame.origin.x = -imageView.bounds.size.width
+                
+                // 再度アニメーションを起動
+                self.animatedImage(imageView)
+        })
         
     }
     
