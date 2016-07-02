@@ -1,36 +1,31 @@
 //
-//  SecondViewController.swift
+//  ChoiceViewController.swift
 //  WorkingCar
 //
-//  Created by 森尻尭之 on 2016/06/28.
+//  Created by 森尻尭之 on 2016/07/02.
 //  Copyright © 2016年 Takayuki Morijiri. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    
     let tableview: UITableView = UITableView()
-    var items:[String] = ["あ行","か行","さ行","た行","な行","は行","ま行","や行"]
+    var items:[String] = ["hoge1","hoge2","hoge3","hoge4","hoge5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableview.frame = CGRectMake(0, 0, 320, 500)
-        tableview.delegate   = self
-        tableview.dataSource = self
-        tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.view.addSubview(tableview)
-
-             // Do any additional setup after loading the view.
-    }
-    
-    func gotoNext(sender: UIButton){
+            tableview.frame = CGRectMake(0, 0, 320, 500)
+            tableview.delegate   = self
+            tableview.dataSource = self
+            tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            self.view.addSubview(tableview)
         
-        let secondView: SecondViewController = SecondViewController()
-        self.navigationController!.pushViewController(secondView, animated: true)
+        
+        // Do any additional setup after loading the view.
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,9 +33,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
-        return self.items.count
+    return self.items.count
     }
-
+    
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
         cell.textLabel?.text = items[indexPath.row]
@@ -49,12 +44,14 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let choiceVC:ChoiceViewController = ChoiceViewController()
-        self.navigationController!.pushViewController(choiceVC, animated: true)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let detailVC:DetailViewController = DetailViewController()
+        self.navigationController!.pushViewController(detailVC, animated: true)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        print("うわああああああああああああ")
         
         print("\(indexPath.row)")
     }
+
     /*
     // MARK: - Navigation
 

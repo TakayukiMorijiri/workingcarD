@@ -29,6 +29,8 @@
 		595D9D571D24ADBC003CC334 /* 006.png in Resources */ = {isa = PBXBuildFile; fileRef = 595D9D501D24ADBC003CC334 /* 006.png */; };
 		595D9D591D25FEF2003CC334 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D9D581D25FEF2003CC334 /* DetailViewController.swift */; };
 		595D9D5B1D26001F003CC334 /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 595D9D5A1D26001F003CC334 /* h1.png */; };
+		59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F533A51D279D3A00111E45 /* ChoiceViewController.swift */; };
+		59F533A81D279EDB00111E45 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 59F533A71D279EDB00111E45 /* json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		595D9D501D24ADBC003CC334 /* 006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 006.png; sourceTree = "<group>"; };
 		595D9D581D25FEF2003CC334 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		595D9D5A1D26001F003CC334 /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
+		59F533A51D279D3A00111E45 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		59F533A71D279EDB00111E45 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,9 @@
 				5947BCAE1D20E5D9007334C5 /* LaunchScreen.storyboard */,
 				5947BCB11D20E5D9007334C5 /* Info.plist */,
 				5947BCA91D20E5D9007334C5 /* WorkingCar.xcdatamodeld */,
+				59F533A51D279D3A00111E45 /* ChoiceViewController.swift */,
 				595D9D581D25FEF2003CC334 /* DetailViewController.swift */,
+				59F533A71D279EDB00111E45 /* json */,
 			);
 			path = WorkingCar;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				595D9D541D24ADBC003CC334 /* 003.png in Resources */,
 				5947BCAD1D20E5D9007334C5 /* Assets.xcassets in Resources */,
 				595D9D571D24ADBC003CC334 /* 006.png in Resources */,
+				59F533A81D279EDB00111E45 /* json in Resources */,
 				5947BCA81D20E5D9007334C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */,
 				5947BCD41D219AE9007334C5 /* SecondViewController.swift in Sources */,
 				5947BCAB1D20E5D9007334C5 /* WorkingCar.xcdatamodeld in Sources */,
 				594A5EE71D22227F00A84CBD /* ThirdViewController.swift in Sources */,

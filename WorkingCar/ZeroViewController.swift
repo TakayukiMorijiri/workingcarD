@@ -71,7 +71,7 @@ class ZeroViewController: UIViewController {
         let imageView = UIImageView(image:image1)
         
         // 画像の中心を設定
-        //imageView.center = CGPointMake(187.5, 333.5)
+        imageView.center = CGPointMake(187.5, 333.5)
         
         // UIImageViewのインスタンスをビューに追加
         self.view.addSubview(imageView)
@@ -93,13 +93,8 @@ class ZeroViewController: UIViewController {
     }
     
     func animatedImage(target:UIView?){
-        let timePerSecond = 10.0 / view.bounds.size.width
-        
-        // 画像の位置から画面右までにかかる時間の計算
-        let remainTime = (view.bounds.size.width - target!.frame.origin.x) * timePerSecond
-        
-        // アニメーション
-        UIView.transitionWithView(target!, duration: 2, options: .CurveLinear, animations: { () -> Void in
+
+        UIView.transitionWithView(target!, duration: 30, options: .CurveLinear, animations: { () -> Void in
             
             // 画面右まで移動
             target!.frame.origin.x = self.view.bounds.width
