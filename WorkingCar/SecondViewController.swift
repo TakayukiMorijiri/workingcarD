@@ -11,7 +11,8 @@ import UIKit
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
     let tableview: UITableView = UITableView()
-    var items:[String] = ["あ行","か行","さ行","た行","な行","は行","ま行","や行"]
+    let items = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"]
+    var selectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
         cell.textLabel?.text = items[indexPath.row]
+        
         return cell
     }
     
@@ -52,6 +54,9 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         let choiceVC:ChoiceViewController = ChoiceViewController()
         self.navigationController!.pushViewController(choiceVC, animated: true)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        selectedIndex = indexPath.row
+        choiceVC.cselectedIndex = selectedIndex
         
         print("\(indexPath.row)")
     }

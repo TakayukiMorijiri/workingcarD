@@ -95,16 +95,9 @@ class ZeroViewController: UIViewController {
     func animatedImage(target:UIView?){
 
         UIView.transitionWithView(target!, duration: 30, options: .CurveLinear, animations: { () -> Void in
-            
-            // 画面右まで移動
-            target!.frame.origin.x = self.view.bounds.width
-            
-            }, completion: { _ in
-                
-                // 画面右まで行ったら、画面左に戻す
+            target!.frame.origin.x = self.view.bounds.width},
+            completion: { _ in
                 target!.frame.origin.x = -target!.bounds.size.width
-                
-                // 再度アニメーションを起動
                 self.animatedImage(target)
         })
     }

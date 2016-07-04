@@ -12,7 +12,8 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
 
     
     let tableview: UITableView = UITableView()
-    var items:[String] = ["hoge1","hoge2","hoge3","hoge4","hoge5"]
+    var car_List:[NSDictionary] = []
+    var cselectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,20 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let path = NSBundle.mainBundle().pathForResource("json", ofType: "json")
+        let jsondata = NSData(contentsOfFile: path!)
+        
+        let jsonArray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
+        
+        for data in jsonArray {
+            if data["id"] as! Int == cselectedIndex {
+                print("\(data["name"])")
+                car_List.append(data as! NSDictionary)
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,12 +48,14 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
-    return self.items.count
+    return self.car_List.count
     }
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
-        cell.textLabel?.text = items[indexPath.row]
+//        cell.textLabel?.text = car[indexPath.row]
+        
+        
         return cell
     }
     
