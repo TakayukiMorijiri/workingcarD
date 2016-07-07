@@ -33,7 +33,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .Vertical
-        flowLayout.sectionInset = UIEdgeInsets(top: 20,left: 0,bottom: 10,right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0,left: 0,bottom: 10,right: 0)
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 0
         flowLayout.itemSize = CGSizeMake(screenWidth / 3, screenWidth / 3)

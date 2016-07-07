@@ -23,19 +23,33 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = false
         
+        let label: UILabel = UILabel(frame: CGRectMake(0, 0, 300, 50))
+        label.font = UIFont.systemFontOfSize(25)
+        label.text = "検索方法"
+        label.textColor = UIColor.blackColor()
+        label.backgroundColor = UIColor.whiteColor()
+        label.sizeToFit()
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 10.0
+        label.textAlignment = NSTextAlignment.Center
+        label.layer.position = CGPoint(x: self.view.bounds.width/2,y: 100)
+        self.view.addSubview(label)
+        
         let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(60, 100, 200, 50)
+        btn.frame = CGRectMake(60, 150, 200, 50)
         btn.backgroundColor = UIColor.orangeColor()
         btn.setTitle("あいうえお順", forState: .Normal)
         btn.addTarget(self, action: "gotoSecond:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
         
         let btn1: UIButton = UIButton()
-        btn1.frame = CGRectMake(60, 300, 200, 50)
+        btn1.frame = CGRectMake(60, 250, 200, 50)
         btn1.backgroundColor = UIColor.blackColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
+        
+        let image: UIImage = UIImage()
         
 //        ---------広告実装----------------------------------------------------------------------------
 //        var admobView: GADBannerView = GADBannerView()

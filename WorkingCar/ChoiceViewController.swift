@@ -13,7 +13,8 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     let tableview: UITableView = UITableView()
     var car_List:[NSDictionary] = []
-    var cselectedIndex = -1
+    var selectedIndex = -1
+    var selectedName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +27,16 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         
         // Do any additional setup after loading the view.
-    }
+            }
     
     override func viewWillAppear(animated: Bool) {
-        let path = NSBundle.mainBundle().pathForResource("json", ofType: "json")
+        let path = NSBundle.mainBundle().pathForResource("json", ofType: "")
         let jsondata = NSData(contentsOfFile: path!)
         
         let jsonArray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
         
         for data in jsonArray {
-            if data["id"] as! Int == cselectedIndex {
+            if data["id"] as! Int == selectedIndex {
                 print("\(data["name"])")
                 car_List.append(data as! NSDictionary)
             }
@@ -53,7 +54,10 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as UITableViewCell
-//        cell.textLabel?.text = car[indexPath.row]
+        
+        let workingName = car_List[indexPath.row]["name"] as! String
+        
+        cell.textLabel?.text = "\(workingName)"
         
         
         return cell
@@ -65,6 +69,9 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController!.pushViewController(detailVC, animated: true)
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        print("うわああああああああああああ")
+        
+        selectedName = car_List[indexPath.row]["name"] as! String
+        detailVC.selectedName = selectedName
         
         print("\(indexPath.row)")
     }

@@ -56,7 +56,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         selectedIndex = indexPath.row
-        choiceVC.cselectedIndex = selectedIndex
+        choiceVC.selectedIndex = selectedIndex
         
         print("\(indexPath.row)")
     }
