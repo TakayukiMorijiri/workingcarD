@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+    
+    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
+    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = true
 
     let tableview: UITableView = UITableView()
     let items = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"]
@@ -24,6 +30,34 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         self.view.addSubview(tableview)
 
              // Do any additional setup after loading the view.
+        
+        //        ---------広告実装----------------------------------------------------------------------------
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+        
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.loadRequest(admobRequest)
+        
+        self.view.addSubview(admobView)
+        //        -------------------------------------------------------------------------------------------
+        
+
     }
     
     func gotoNext(sender: UIButton){

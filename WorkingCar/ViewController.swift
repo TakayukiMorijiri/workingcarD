@@ -7,14 +7,18 @@
 //
 
 import UIKit
-//import GoogleMobileAds
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     
-//    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
-//    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
-//    let AdMobTest:Bool = true
-//    let SimulatorTest:Bool = true
+    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
+    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = true
+    
+    var Image:UIImageView!
+    var Image1:UIImageView!
+    var Image2:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,32 +53,47 @@ class ViewController: UIViewController {
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
         
-        let image: UIImage = UIImage()
+        
+        Image = UIImageView(frame: CGRectMake(0.5, 380, 320, 100))
+        let myImage = UIImage(named: "bci.png")
+        Image.image = myImage
+        self.view.addSubview(Image)
+        
+//        Image1 = UIImageView(frame: CGRectMake(10, 0, 300, 50))
+//        let myImage1 = UIImage(named: "")
+//        Image1.image = myImage
+//        self.view.addSubview(Image2)
+//        
+//        Image2 = UIImageView(frame: CGRectMake(200, 0, 300, 50))
+//        let myImage2 = UIImage(named: "")
+//        Image2.image = myImage
+//        self.view.addSubview(Image2)
+        
         
 //        ---------広告実装----------------------------------------------------------------------------
-//        var admobView: GADBannerView = GADBannerView()
-//        admobView = GADBannerView(adSize:kGADAdSizeBanner)
-//        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
-//        
-//        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
-//        admobView.adUnitID = AdMobID
-//        admobView.rootViewController = self
-//        
-//        let admobRequest:GADRequest = GADRequest()
-//        
-//        if AdMobTest {
-//            if SimulatorTest {
-//                admobRequest.testDevices = [kGADSimulatorID]
-//            }
-//            else {
-//                admobRequest.testDevices = [TEST_DEVICE_ID]
-//            }
-//            
-//        }
-//        
-//        admobView.loadRequest(admobRequest)
-//        
-//        self.view.addSubview(admobView)
+        var admobView: GADBannerView = GADBannerView()
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+        
+        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+        admobView.adUnitID = AdMobID
+        admobView.rootViewController = self
+        
+        let admobRequest:GADRequest = GADRequest()
+        
+        if AdMobTest {
+            if SimulatorTest {
+                admobRequest.testDevices = [kGADSimulatorID]
+            }
+            else {
+                admobRequest.testDevices = [TEST_DEVICE_ID]
+            }
+            
+        }
+        
+        admobView.loadRequest(admobRequest)
+        
+        self.view.addSubview(admobView)
 //        -------------------------------------------------------------------------------------------
         
     }
