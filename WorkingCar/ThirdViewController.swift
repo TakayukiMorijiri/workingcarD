@@ -14,12 +14,13 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
+    var selectedIndex = -1
 
     
     //var image = UIImage()
     
     
-    var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png"]
+    var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png","007.png"]
     
 
     override func viewDidLoad() {
@@ -62,20 +63,28 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         let cell : CustomCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCell
         
-//        cell.title.text = "Working!";
-        //cell.working_car_Image.image = UIImage(named: "000.png")
-        
-//        cell.image.image = UIImage(named: "000.png")
-        
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
-//        cell.title.text = "hoge"
         cell.backgroundColor = UIColor.whiteColor()
-        cell.layer.borderWidth = 0.5
+        cell.layer.borderWidth = 1.0
         cell.frame.size.width = screenWidth / 3
         cell.frame.size.height = screenWidth / 3
     
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let categoryVC:CategoryViewController = CategoryViewController()
+        self.navigationController!.pushViewController(categoryVC, animated: true)
+        
+        selectedIndex = indexPath.row
+        categoryVC.selectedIndex = selectedIndex
+        
+        print("\(indexPath.row)")
+        
+        
+        
     }
 
     /*

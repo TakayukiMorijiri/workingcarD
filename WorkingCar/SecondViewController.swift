@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleMobileAds
+//import GoogleMobileAds
 
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
@@ -32,29 +32,29 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
              // Do any additional setup after loading the view.
         
         //        ---------広告実装----------------------------------------------------------------------------
-        var admobView: GADBannerView = GADBannerView()
-        admobView = GADBannerView(adSize:kGADAdSizeBanner)
-        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
-        
-        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
-        admobView.adUnitID = AdMobID
-        admobView.rootViewController = self
-        
-        let admobRequest:GADRequest = GADRequest()
-        
-        if AdMobTest {
-            if SimulatorTest {
-                admobRequest.testDevices = [kGADSimulatorID]
-            }
-            else {
-                admobRequest.testDevices = [TEST_DEVICE_ID]
-            }
-            
-        }
-        
-        admobView.loadRequest(admobRequest)
-        
-        self.view.addSubview(admobView)
+//        var admobView: GADBannerView = GADBannerView()
+//        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+//        admobView.frame.origin = CGPointMake(0, self.view.frame.size.height - admobView.frame.height)
+//        
+//        admobView.frame.size = CGSizeMake(self.view.frame.width, admobView.frame.height)
+//        admobView.adUnitID = AdMobID
+//        admobView.rootViewController = self
+//        
+//        let admobRequest:GADRequest = GADRequest()
+//        
+//        if AdMobTest {
+//            if SimulatorTest {
+//                admobRequest.testDevices = [kGADSimulatorID]
+//            }
+//            else {
+//                admobRequest.testDevices = [TEST_DEVICE_ID]
+//            }
+//            
+//        }
+//        
+//        admobView.loadRequest(admobRequest)
+//        
+//        self.view.addSubview(admobView)
         //        -------------------------------------------------------------------------------------------
         
 

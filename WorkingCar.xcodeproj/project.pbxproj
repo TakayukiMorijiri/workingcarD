@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590243981D2F4BE2000473AB /* 007.png in Resources */ = {isa = PBXBuildFile; fileRef = 590243971D2F4BE2000473AB /* 007.png */; };
 		59058CEC1D2BF808003481E5 /* h.png in Resources */ = {isa = PBXBuildFile; fileRef = 59058CEB1D2BF808003481E5 /* h.png */; };
 		5947BCA31D20E5D9007334C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCA21D20E5D9007334C5 /* AppDelegate.swift */; };
 		5947BCA51D20E5D9007334C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCA41D20E5D9007334C5 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		59F533A81D279EDB00111E45 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 59F533A71D279EDB00111E45 /* json */; };
 		59F533AC1D29F8DE00111E45 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */; };
 		59F92F201D2EB6D000523D53 /* bci.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F92F1F1D2EB6D000523D53 /* bci.png */; };
+		59F92F221D2F37DF00523D53 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F92F211D2F37DF00523D53 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		590243971D2F4BE2000473AB /* 007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 007.png; sourceTree = "<group>"; };
 		59058CEB1D2BF808003481E5 /* h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h.png; sourceTree = "<group>"; };
 		5947BC9F1D20E5D9007334C5 /* WorkingCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkingCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5947BCA21D20E5D9007334C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		59F533A71D279EDB00111E45 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
 		59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		59F92F1F1D2EB6D000523D53 /* bci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bci.png; sourceTree = "<group>"; };
+		59F92F211D2F37DF00523D53 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				595D9D4E1D24ADBC003CC334 /* 004.png */,
 				595D9D4F1D24ADBC003CC334 /* 005.png */,
 				595D9D501D24ADBC003CC334 /* 006.png */,
+				590243971D2F4BE2000473AB /* 007.png */,
 				595D9D5A1D26001F003CC334 /* h1.png */,
 				59058CEB1D2BF808003481E5 /* h.png */,
 				59F92F1F1D2EB6D000523D53 /* bci.png */,
@@ -156,12 +161,13 @@
 				5947BCD31D219AE9007334C5 /* SecondViewController.swift */,
 				594A5EE61D22227F00A84CBD /* ThirdViewController.swift */,
 				595D9D481D237B8F003CC334 /* CustomCell.swift */,
+				59F92F211D2F37DF00523D53 /* CategoryViewController.swift */,
+				59F533A51D279D3A00111E45 /* ChoiceViewController.swift */,
+				595D9D581D25FEF2003CC334 /* DetailViewController.swift */,
 				5947BCA61D20E5D9007334C5 /* Main.storyboard */,
 				5947BCAE1D20E5D9007334C5 /* LaunchScreen.storyboard */,
 				5947BCB11D20E5D9007334C5 /* Info.plist */,
 				5947BCA91D20E5D9007334C5 /* WorkingCar.xcdatamodeld */,
-				59F533A51D279D3A00111E45 /* ChoiceViewController.swift */,
-				595D9D581D25FEF2003CC334 /* DetailViewController.swift */,
 				5947BCAC1D20E5D9007334C5 /* Assets.xcassets */,
 				59F533A71D279EDB00111E45 /* json */,
 			);
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				595D9D551D24ADBC003CC334 /* 004.png in Resources */,
+				590243981D2F4BE2000473AB /* 007.png in Resources */,
 				595D9D511D24ADBC003CC334 /* 000.png in Resources */,
 				595D9D5B1D26001F003CC334 /* h1.png in Resources */,
 				5947BCB01D20E5D9007334C5 /* LaunchScreen.storyboard in Resources */,
@@ -329,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F92F221D2F37DF00523D53 /* CategoryViewController.swift in Sources */,
 				59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */,
 				5947BCD41D219AE9007334C5 /* SecondViewController.swift in Sources */,
 				5947BCAB1D20E5D9007334C5 /* WorkingCar.xcdatamodeld in Sources */,
