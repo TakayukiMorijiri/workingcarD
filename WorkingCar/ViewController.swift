@@ -16,13 +16,16 @@ class ViewController: UIViewController {
 //    let AdMobTest:Bool = true
 //    let SimulatorTest:Bool = true
     
-    var Image:UIImageView!
-    var Image1:UIImageView!
-    var Image2:UIImageView!
+    
+    
+    
+//    var Image1:UIImageView!
+//    var Image2:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = false
@@ -53,11 +56,25 @@ class ViewController: UIViewController {
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
         
-        
-        Image = UIImageView(frame: CGRectMake(0.5, 380, 320, 100))
-        let myImage = UIImage(named: "bci.png")
-        Image.image = myImage
+        let Image = UIImageView()
+        Image.image = UIImage(named: "bci.png")
+        Image.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(Image)
+        
+        let viwes = ["Image": Image]
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "|-0-[Image]-0-|",
+            options: .AlignAllTop,
+            metrics: nil,
+            views: viwes))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-300-[Image]-50-|",
+            options: .AlignAllTop,
+            metrics: nil,
+            views: viwes))
+        
+        
         
 //        Image1 = UIImageView(frame: CGRectMake(10, 0, 300, 50))
 //        let myImage1 = UIImage(named: "")

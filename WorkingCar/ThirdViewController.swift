@@ -21,7 +21,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     
     var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png","007.png"]
-    
+    var carTitle = ["ショベル","ダンプ","クレーン","ゴミ収集車","ホイールローダー","ユニック","トレーラー","その他"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+        return 8
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -65,6 +65,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
+        cell.title.text = carTitle[indexPath.row]
         cell.backgroundColor = UIColor.whiteColor()
         cell.layer.borderWidth = 1.0
         cell.frame.size.width = screenWidth / 3
