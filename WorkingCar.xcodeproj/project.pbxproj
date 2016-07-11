@@ -34,7 +34,6 @@
 		59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F533A51D279D3A00111E45 /* ChoiceViewController.swift */; };
 		59F533A81D279EDB00111E45 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 59F533A71D279EDB00111E45 /* json */; };
 		59F533AC1D29F8DE00111E45 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */; };
-		59F92F201D2EB6D000523D53 /* bci.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F92F1F1D2EB6D000523D53 /* bci.png */; };
 		59F92F221D2F37DF00523D53 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F92F211D2F37DF00523D53 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +88,6 @@
 		59F533A51D279D3A00111E45 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		59F533A71D279EDB00111E45 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
 		59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		59F92F1F1D2EB6D000523D53 /* bci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bci.png; sourceTree = "<group>"; };
 		59F92F211D2F37DF00523D53 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 				590243971D2F4BE2000473AB /* 007.png */,
 				595D9D5A1D26001F003CC334 /* h1.png */,
 				59058CEB1D2BF808003481E5 /* h.png */,
-				59F92F1F1D2EB6D000523D53 /* bci.png */,
 				5947BCA21D20E5D9007334C5 /* AppDelegate.swift */,
 				594A5EE81D22CA7500A84CBD /* ZeroViewController.swift */,
 				5947BCA41D20E5D9007334C5 /* ViewController.swift */,
@@ -304,7 +301,6 @@
 				5947BCB01D20E5D9007334C5 /* LaunchScreen.storyboard in Resources */,
 				595D9D531D24ADBC003CC334 /* 002.png in Resources */,
 				59058CEC1D2BF808003481E5 /* h.png in Resources */,
-				59F92F201D2EB6D000523D53 /* bci.png in Resources */,
 				594A5EEB1D22D3E500A84CBD /* 素材.png in Resources */,
 				595D9D561D24ADBC003CC334 /* 005.png in Resources */,
 				595D9D521D24ADBC003CC334 /* 001.png in Resources */,

@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = false
         
-        let label: UILabel = UILabel(frame: CGRectMake(0, 0, 300, 50))
+        let label: UILabel = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFontOfSize(25)
         label.text = "検索方法"
         label.textColor = UIColor.blackColor()
@@ -39,18 +40,17 @@ class ViewController: UIViewController {
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
         label.textAlignment = NSTextAlignment.Center
-        label.layer.position = CGPoint(x: self.view.bounds.width/2,y: 100)
         self.view.addSubview(label)
         
         let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(60, 150, 200, 50)
+        btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = UIColor.orangeColor()
         btn.setTitle("あいうえお順", forState: .Normal)
         btn.addTarget(self, action: "gotoSecond:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
         
         let btn1: UIButton = UIButton()
-        btn1.frame = CGRectMake(60, 250, 200, 50)
+        btn1.translatesAutoresizingMaskIntoConstraints = false
         btn1.backgroundColor = UIColor.blackColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
@@ -61,20 +61,27 @@ class ViewController: UIViewController {
         Image.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(Image)
         
-        let viwes = ["Image": Image]
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "|-0-[Image]-0-|",
-            options: .AlignAllTop,
-            metrics: nil,
-            views: viwes))
+        let viwes = ["label":label,"btn": btn,"btn1": btn1,"Image": Image]
         
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-300-[Image]-50-|",
-            options: .AlignAllTop,
-            metrics: nil,
-            views: viwes))
+            "|-50-[label]-50-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-90-[label]-450-|", options: .AlignAllTop, metrics: nil, views: viwes))
         
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "|-60-[btn]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-140-[btn]-380-|", options: .AlignAllTop, metrics: nil, views: viwes))
         
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "|-60-[btn1]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-220-[btn1]-300-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "|-2-[Image]-0-|",options: .AlignAllTop,metrics: nil,views: viwes))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-350-[Image]-100-|",options: .AlignAllTop,metrics: nil,views: viwes))
         
 //        Image1 = UIImageView(frame: CGRectMake(10, 0, 300, 50))
 //        let myImage1 = UIImage(named: "")
