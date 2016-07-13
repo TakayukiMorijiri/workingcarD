@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MisterFusion.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WorkingCar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WorkingCarTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WorkingCarUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>36A3A201D48BD886765D79997012D5B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A2E89AD098F3C4E62332A0F639770BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>925E394A465FB318EEEB394C71076E39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FC843BD22328DEFBCAB1DA4A92108F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

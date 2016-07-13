@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MisterFusion
 //import GoogleMobileAds
 
 class ViewController: UIViewController {
@@ -15,12 +16,6 @@ class ViewController: UIViewController {
 //    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
 //    let AdMobTest:Bool = true
 //    let SimulatorTest:Bool = true
-    
-    
-    
-    
-//    var Image1:UIImageView!
-//    var Image2:UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,58 +35,79 @@ class ViewController: UIViewController {
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10.0
         label.textAlignment = NSTextAlignment.Center
-        self.view.addSubview(label)
+        self.view.addLayoutSubview(label,andConstraints:
+            label.Top |+| 100,
+            label.Right |-| 50,
+            label.Left |+| 50
+        )
         
         let btn: UIButton = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = UIColor.orangeColor()
         btn.setTitle("あいうえお順", forState: .Normal)
         btn.addTarget(self, action: "gotoSecond:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(btn)
+        self.view.addLayoutSubview(btn,andConstraints:
+                     btn.Top |==| label.Bottom |+| 30,
+//                     btn.Right |-| 60,
+                     btn.Left |+| 60,
+                     btn.Width |==| 200,
+                     btn.Height |==| 65
+        )
         
         let btn1: UIButton = UIButton()
         btn1.translatesAutoresizingMaskIntoConstraints = false
         btn1.backgroundColor = UIColor.blackColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(btn1)
+        self.view.addLayoutSubview(btn1,andConstraints:
+                     btn1.Top |==| btn.Bottom |+| 50,
+//                     btn1.Right |-| 60,
+                     btn1.Left |==| btn.Left,
+                     btn1.Width |==| btn.Width,
+                     btn1.Height |==| btn.Height
+        
+        )
         
         let Image = UIImageView()
         Image.image = UIImage(named: "bci.png")
         Image.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(Image)
+        self.view.addLayoutSubview(Image,andConstraints:
         
-        let viwes = ["label":label,"btn": btn,"btn1": btn1,"Image": Image]
+            Image.Top |==| btn1.Bottom |+| 40
+//            Image.
+            
+            
         
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "|-50-[label]-50-|", options: .AlignAllTop, metrics: nil, views: viwes))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-90-[label]-450-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        )
         
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "|-60-[btn]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-140-[btn]-380-|", options: .AlignAllTop, metrics: nil, views: viwes))
+//        self.view.addLayoutSubview(label,andConstraints:
+//             label.Top |+| 100,
+//             label.Right |-| 50,
+//             label.Left |+| 50,
+//                                   )
         
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "|-60-[btn1]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-220-[btn1]-300-|", options: .AlignAllTop, metrics: nil, views: viwes))
+//        -----codeでautolayout----------------------------------------------------------------
+//        let viwes = ["label":label,"btn": btn,"btn1": btn1,"Image": Image]
         
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "|-2-[Image]-0-|",options: .AlignAllTop,metrics: nil,views: viwes))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-350-[Image]-100-|",options: .AlignAllTop,metrics: nil,views: viwes))
-        
-//        Image1 = UIImageView(frame: CGRectMake(10, 0, 300, 50))
-//        let myImage1 = UIImage(named: "")
-//        Image1.image = myImage
-//        self.view.addSubview(Image2)
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "H:|-50-[label]-50-|", options: .AlignAllTop, metrics: nil, views: viwes))
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "V:|-90-[label]-150-|", options: .AlignAllTop, metrics: nil, views: viwes))
 //        
-//        Image2 = UIImageView(frame: CGRectMake(200, 0, 300, 50))
-//        let myImage2 = UIImage(named: "")
-//        Image2.image = myImage
-//        self.view.addSubview(Image2)
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "H:|-60-[btn]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "V:|-180-[btn]-350-|", options: .AlignAllTop, metrics: nil, views: viwes))
+        
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "H:|-60-[btn1]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "V:[label]-100-[btn1]-100-[Image]", options: .AlignAllTop, metrics: nil, views: viwes))
+        
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "|-2-[Image]-0-|",options: .AlignAllTop,metrics: nil,views: viwes))
+//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+//            "V:|-370-[Image]-80-|",options: .AlignAllTop,metrics: nil,views: viwes))
         
         
 //        ---------広告実装----------------------------------------------------------------------------
