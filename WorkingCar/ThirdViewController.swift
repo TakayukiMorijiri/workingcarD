@@ -26,6 +26,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.view.backgroundColor = UIColor.whiteColor()
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height

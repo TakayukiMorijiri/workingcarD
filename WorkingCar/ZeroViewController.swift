@@ -37,22 +37,13 @@ class ZeroViewController: UIViewController {
         
         
         let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(60, 500, 200, 50)
+        btn.frame = CGRectMake(0, 0, 200, 50)
+        btn.layer.position = CGPoint(x: self.view.frame.size.width/2,y: 500)
         btn.backgroundColor = UIColor.orangeColor()
         btn.setTitle("ひらく", forState: .Normal)
         btn.addTarget(self, action: "gotoView:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn)
         
-//        let testView: UIView = UIView()
-//        testView.backgroundColor = UIColor.redColor()
-//        testView.frame = CGRectMake(0, 199, 100, 100)
-//        self.view.addSubview(testView)
-//        UIView.transitionWithView(testView, duration: 2, options: .CurveLinear, animations: { () -> Void in
-//            testView.frame.origin.x = 400
-//            }, completion: { _ in
-//                testView.frame.origin.x = 0
-//                self.animatedImage(testView)
-//        })
     }
     
     func gotoView(sender: UIButton){

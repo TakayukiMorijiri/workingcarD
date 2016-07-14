@@ -42,49 +42,32 @@ class ViewController: UIViewController {
         )
         
         let btn: UIButton = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.translatesAutoresizingMaskIntoConstraints = true
         btn.backgroundColor = UIColor.orangeColor()
+        btn.frame = CGRectMake(0, 0, 200, 60)
+        btn.layer.position = CGPoint(x: self.view.frame.size.width/2,y: 200)
         btn.setTitle("あいうえお順", forState: .Normal)
         btn.addTarget(self, action: "gotoSecond:", forControlEvents: .TouchUpInside)
-        self.view.addLayoutSubview(btn,andConstraints:
-                     btn.Top |==| label.Bottom |+| 30,
-//                     btn.Right |-| 60,
-                     btn.Left |+| 60,
-                     btn.Width |==| 200,
-                     btn.Height |==| 65
-        )
+        self.view.addSubview(btn)
         
         let btn1: UIButton = UIButton()
-        btn1.translatesAutoresizingMaskIntoConstraints = false
+        btn1.translatesAutoresizingMaskIntoConstraints = true
+        btn1.frame = CGRectMake(0, 0, 200, 60)
+        btn1.layer.position = CGPoint(x:self.view.frame.size.width/2, y: 350)
         btn1.backgroundColor = UIColor.blackColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
-        self.view.addLayoutSubview(btn1,andConstraints:
-                     btn1.Top |==| btn.Bottom |+| 50,
-//                     btn1.Right |-| 60,
-                     btn1.Left |==| btn.Left,
-                     btn1.Width |==| btn.Width,
-                     btn1.Height |==| btn.Height
+        self.view.addSubview(btn1)
         
-        )
         
         let Image = UIImageView()
         Image.image = UIImage(named: "bci.png")
         Image.translatesAutoresizingMaskIntoConstraints = false
         self.view.addLayoutSubview(Image,andConstraints:
         
-            Image.Top |==| btn1.Bottom |+| 40
-//            Image.
-            
-            
-        
+            Image.Top |+| 400,
+            Image.Bottom |-| 50
         )
-        
-//        self.view.addLayoutSubview(label,andConstraints:
-//             label.Top |+| 100,
-//             label.Right |-| 50,
-//             label.Left |+| 50,
-//                                   )
         
 //        -----codeでautolayout----------------------------------------------------------------
 //        let viwes = ["label":label,"btn": btn,"btn1": btn1,"Image": Image]
