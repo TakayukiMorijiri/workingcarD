@@ -8,6 +8,7 @@
 
 import UIKit
 //import GoogleMobileAds
+//import MisterFusion
 
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
@@ -16,20 +17,40 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 //    let AdMobTest:Bool = true
 //    let SimulatorTest:Bool = true
 
+    
     let tableview: UITableView = UITableView()
     let items = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"]
     var selectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = UIColor.whiteColor()
         
         tableview.frame = CGRectMake(0, 0, 320, 500)
+        tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.delegate   = self
         tableview.dataSource = self
         tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(tableview)
+        
+        
+        let views = ["Table":tableview]
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
+        
+        
+        self.navigationItem.title = "あいうえお順！"
+        
+        
+//        self.view.addLayoutSubview(tableview, andConstraint:
+//            |-0-"Table"-0-|
+//
+//        
+//        )
 
-             // Do any additional setup after loading the view.
+
         
         //        ---------広告実装----------------------
 //        var admobView: GADBannerView = GADBannerView()

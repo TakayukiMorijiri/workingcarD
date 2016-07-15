@@ -69,29 +69,6 @@ class ViewController: UIViewController {
             Image.Bottom |-| 50
         )
         
-//        -----codeでautolayout----------------------------------------------------------------
-//        let viwes = ["label":label,"btn": btn,"btn1": btn1,"Image": Image]
-        
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "H:|-50-[label]-50-|", options: .AlignAllTop, metrics: nil, views: viwes))
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "V:|-90-[label]-150-|", options: .AlignAllTop, metrics: nil, views: viwes))
-//        
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "H:|-60-[btn]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "V:|-180-[btn]-350-|", options: .AlignAllTop, metrics: nil, views: viwes))
-        
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "H:|-60-[btn1]-60-|", options: .AlignAllTop, metrics: nil, views: viwes))
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "V:[label]-100-[btn1]-100-[Image]", options: .AlignAllTop, metrics: nil, views: viwes))
-        
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "|-2-[Image]-0-|",options: .AlignAllTop,metrics: nil,views: viwes))
-//        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-//            "V:|-370-[Image]-80-|",options: .AlignAllTop,metrics: nil,views: viwes))
-        
         
 //        ---------広告実装----------------------------------------------------------------------------
 //        var admobView: GADBannerView = GADBannerView()

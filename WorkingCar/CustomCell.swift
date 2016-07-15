@@ -11,7 +11,7 @@ import UIKit
 class CustomCell: UICollectionViewCell {
      var title: UILabel!
      var working_car_Image: UIImageView!
-//     var carTitle = ["ショベル","ダンプ","クレーン","ゴミ収集車","ホイールローダー","ユニック","トレーラー"]
+
     
     
     override init(frame: CGRect){

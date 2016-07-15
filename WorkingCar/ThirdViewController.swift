@@ -21,12 +21,14 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     
     var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png","007.png"]
-    var carTitle = ["ショベル","ダンプ","クレーン","ゴミ収集車","ホイールローダー","ユニック","トレーラー","その他"]
+//    var carTitle = ["ショベル","ダンプ","クレーン","ゴミ収集車","ホイールローダー","ユニック","トレーラー","その他"]
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.backgroundColor = UIColor.whiteColor()
+        
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
@@ -66,7 +68,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
-        cell.title.text = carTitle[indexPath.row]
+//        cell.title.text = carTitle[indexPath.row]
         cell.backgroundColor = UIColor.whiteColor()
         cell.layer.borderWidth = 1.0
         cell.frame.size.width = screenWidth / 3

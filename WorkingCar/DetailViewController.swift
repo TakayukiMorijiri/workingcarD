@@ -83,7 +83,7 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
 //        scroll?.delegate = self
 //        dots?.addTarget(self, action: Selector("swipe:"), forControlEvents: UIControlEvents.ValueChanged)
     
-        let myLabel:UILabel = UILabel(frame: CGRectMake(0,0,200,50))
+        let myLabel:UILabel = UILabel(frame: CGRectMake(0,0,280,50))
         myLabel.backgroundColor = UIColor.orangeColor()
         myLabel.text = carDictionary["name"] as? String
         myLabel.textColor = UIColor.blackColor()
@@ -111,11 +111,13 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         
         // Do any additional setup after loading the view.
         
+        self.navigationItem.title = carDictionary["name"] as? String
+        
     }
-    func pressed(sender: UIButton!) {
-        self.dismissViewControllerAnimated(true) { () -> Void in
-        }
-    }
+//    func pressed(sender: UIButton!) {
+//        self.dismissViewControllerAnimated(true) { () -> Void in
+//        }
+//    }
     
     
         
