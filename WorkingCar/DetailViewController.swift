@@ -83,15 +83,15 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
 //        scroll?.delegate = self
 //        dots?.addTarget(self, action: Selector("swipe:"), forControlEvents: UIControlEvents.ValueChanged)
     
-        let myLabel:UILabel = UILabel(frame: CGRectMake(0,0,280,50))
-        myLabel.backgroundColor = UIColor.orangeColor()
-        myLabel.text = carDictionary["name"] as? String
-        myLabel.textColor = UIColor.blackColor()
-        myLabel.textAlignment = NSTextAlignment.Center
-        myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 320)
-        self.view.addSubview(myLabel)
+//        let myLabel:UILabel = UILabel(frame: CGRectMake(0,0,280,50))
+//        myLabel.backgroundColor = UIColor.orangeColor()
+//        myLabel.text = carDictionary["name"] as? String
+//        myLabel.textColor = UIColor.blackColor()
+//        myLabel.textAlignment = NSTextAlignment.Center
+//        myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 320)
+//        self.view.addSubview(myLabel)
     
-        let myTextView: UITextView = UITextView(frame: CGRectMake(10, 360, self.view.frame.width - 20, 200))
+        let myTextView: UITextView = UITextView(frame: CGRectMake(10, 300, self.view.frame.width - 20, 250))
         myTextView.text = carDictionary["description"] as! String
         myTextView.layer.masksToBounds = true
         myTextView.layer.cornerRadius = 20.0
@@ -101,6 +101,7 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         myTextView.textColor = UIColor.blackColor()
         myTextView.textAlignment = NSTextAlignment.Left
         myTextView.editable = false
+        self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(myTextView)
         
         workingimage = UIImageView(frame: CGRectMake(0, 0, 300, 200))
