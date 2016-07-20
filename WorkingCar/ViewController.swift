@@ -20,10 +20,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.hidesBackButton = true
         
         
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = false
+        
+        let btn_back = UIBarButtonItem()
+        btn_back.title = ""
+        self.navigationItem.backBarButtonItem = btn_back
         
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

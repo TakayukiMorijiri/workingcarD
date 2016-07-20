@@ -28,6 +28,9 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "アイコン"
+
+        self.view.backgroundColor = UIColor.whiteColor()
         
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.width
@@ -37,7 +40,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .Vertical
-        flowLayout.sectionInset = UIEdgeInsets(top: 0,left: 0,bottom: 10,right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 10,left: 0,bottom: 20,right: 0)
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 0
         flowLayout.itemSize = CGSizeMake(screenWidth / 3, screenWidth / 3)
@@ -46,6 +49,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         collectionView!.registerClass(CustomCell.self, forCellWithReuseIdentifier: "cell")
         collectionView!.dataSource = self
         collectionView!.delegate = self
+        collectionView!.backgroundColor = UIColor.whiteColor()
         view.addSubview(collectionView!)
         }
     
@@ -68,6 +72,10 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
+        
+        cell.working_car_Image.layer.cornerRadius = 25
+        cell.working_car_Image.layer.masksToBounds = true
+        
 //        cell.title.text = carTitle[indexPath.row]
         cell.backgroundColor = UIColor.whiteColor()
         cell.layer.borderWidth = 1.0

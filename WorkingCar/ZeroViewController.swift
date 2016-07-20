@@ -13,6 +13,7 @@ class ZeroViewController: UIViewController {
     //@IBOutlet weak var myImageView: UIImageView!
     
     var myImageView: UIImageView!
+    var timer:NSTimer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,12 @@ class ZeroViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        let btn_back = UIBarButtonItem()
+        btn_back.title = ""
+        self.navigationItem.backBarButtonItem = btn_back
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(2.0,target: self,selector: "gotoView",userInfo: nil,repeats: false)
+        
         
         let label: UILabel = UILabel(frame: CGRectMake(0, 0, 300, 50))
         label.font = UIFont.systemFontOfSize(30)
@@ -36,24 +43,24 @@ class ZeroViewController: UIViewController {
         self.view.addSubview(label)
         
         
-        let btn: UIButton = UIButton()
-        btn.frame = CGRectMake(0, 0, 200, 50)
-        btn.layer.position = CGPoint(x: self.view.frame.size.width/2,y: 500)
-        btn.backgroundColor = UIColor.orangeColor()
-        btn.setTitle("ひらく", forState: .Normal)
-        btn.addTarget(self, action: "gotoView:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(btn)
+//        let btn: UIButton = UIButton()
+//        btn.frame = CGRectMake(0, 0, 200, 50)
+//        btn.layer.position = CGPoint(x: self.view.frame.size.width/2,y: 500)
+//        btn.backgroundColor = UIColor.orangeColor()
+//        btn.setTitle("ひらく", forState: .Normal)
+//        btn.addTarget(self, action: "gotoView:", forControlEvents: .TouchUpInside)
+//        self.view.addSubview(btn)
         
     }
     
-    func gotoView(sender: UIButton){
+    func gotoView(){
         
         let viewController: ViewController = ViewController()
         self.navigationController!.pushViewController(viewController, animated: true)
     }
     
     func initImageView(){
-        myImageView = UIImageView(frame: CGRectMake(0,0,100,200))
+        myImageView = UIImageView(frame: CGRectMake(0,0,view.frame.size.width,view.frame.size.height))
         
         // UIImage インスタンスの生成
         var image1:UIImage? = UIImage(named:"素材.png")
@@ -102,6 +109,7 @@ class ZeroViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
+        
     }
     
     override func didReceiveMemoryWarning() {

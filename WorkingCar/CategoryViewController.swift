@@ -24,7 +24,12 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableview.delegate   = self
         tableview.dataSource = self
         tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableview.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableview)
+        
+        let views = ["Table":tableview]
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
 
         // Do any additional setup after loading the view.
     }

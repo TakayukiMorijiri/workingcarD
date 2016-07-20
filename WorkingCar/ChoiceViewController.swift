@@ -19,6 +19,14 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let btn_back = UIBarButtonItem()
+        btn_back.title = ""
+        self.navigationItem.backBarButtonItem = btn_back
+        
+            
+        
+            self.view.backgroundColor = UIColor.whiteColor()
+        
             tableview.frame = CGRectMake(0, 0, 320, 500)
             tableview.delegate   = self
             tableview.dataSource = self

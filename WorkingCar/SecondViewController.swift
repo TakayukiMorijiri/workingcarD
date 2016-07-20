@@ -26,6 +26,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         super.viewDidLoad()
     // Do any additional setup after loading the view.
         
+        self.navigationItem.title = "あいうえお順"
         self.view.backgroundColor = UIColor.whiteColor()
         
         tableview.frame = CGRectMake(0, 0, 320, 500)
@@ -41,14 +42,8 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
         
         
-        self.navigationItem.title = "あいうえお順！"
         
         
-//        self.view.addLayoutSubview(tableview, andConstraint:
-//            |-0-"Table"-0-|
-//
-//        
-//        )
 
 
         
