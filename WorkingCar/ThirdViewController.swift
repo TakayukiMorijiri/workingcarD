@@ -76,7 +76,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
         
-        cell.working_car_Image.layer.cornerRadius = 80
+        cell.working_car_Image.layer.cornerRadius = 40
         cell.working_car_Image.layer.masksToBounds = true
         
         let itemTotalWidth = screenWidth - 30

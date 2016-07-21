@@ -27,7 +27,7 @@ class ZeroViewController: UIViewController {
         btn_back.title = ""
         self.navigationItem.backBarButtonItem = btn_back
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2.0,target: self,selector: "gotoView",userInfo: nil,repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(2.0,target: self,selector: #selector(ZeroViewController.gotoView),userInfo: nil,repeats: false)
         
         
         let label: UILabel = UILabel(frame: CGRectMake(0, 0, 300, 50))
@@ -63,7 +63,7 @@ class ZeroViewController: UIViewController {
         myImageView = UIImageView(frame: CGRectMake(0,0,view.frame.size.width,view.frame.size.height))
         
         // UIImage インスタンスの生成
-        var image1:UIImage? = UIImage(named:"素材.png")
+        let image1:UIImage? = UIImage(named:"素材.png")
         
         // UIImageView 初期化
         let imageView = UIImageView(image:image1)

@@ -22,7 +22,7 @@ class CustomCell: UICollectionViewCell {
 //        self.working_car_Image.frame = CGRectMake(3, 10, 20, 80)
 //        self.working_car_Image.frame.size.width = 
         self.working_car_Image.layer.masksToBounds = true
-        self.layer.cornerRadius = 80 
+        self.layer.cornerRadius = 40
         self.addSubview(working_car_Image)
         
 //        let views = ["Image":hoge]

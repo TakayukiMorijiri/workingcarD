@@ -48,7 +48,8 @@ class ViewController: UIViewController {
         
         let btn: UIButton = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = true
-        btn.backgroundColor = UIColor.orangeColor()
+        btn.backgroundColor = UIColor.blackColor()
+        btn.layer.cornerRadius = 20
         btn.frame = CGRectMake(0, 0, 200, 60)
         btn.layer.position = CGPoint(x: self.view.frame.size.width/2,y: 200)
         btn.setTitle("あいうえお順", forState: .Normal)
@@ -57,9 +58,10 @@ class ViewController: UIViewController {
         
         let btn1: UIButton = UIButton()
         btn1.translatesAutoresizingMaskIntoConstraints = true
+        btn1.layer.cornerRadius = 20
         btn1.frame = CGRectMake(0, 0, 200, 60)
         btn1.layer.position = CGPoint(x:self.view.frame.size.width/2, y: 350)
-        btn1.backgroundColor = UIColor.blackColor()
+        btn1.backgroundColor = UIColor.orangeColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
@@ -68,10 +70,13 @@ class ViewController: UIViewController {
         let Image = UIImageView()
         Image.image = UIImage(named: "bci.png")
         Image.translatesAutoresizingMaskIntoConstraints = false
+        let BoundSize_w: CGFloat = UIScreen.mainScreen().bounds.width
+        let BoundSize_h: CGFloat = UIScreen.mainScreen().bounds.height
         self.view.addLayoutSubview(Image,andConstraints:
-        
             Image.Top |+| 400,
-            Image.Bottom |-| 50
+            Image.Bottom |-| 50,
+            Image.Right |+| 0,
+            Image.Left |-| 0
         )
         
         

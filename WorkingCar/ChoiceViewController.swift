@@ -30,8 +30,14 @@ class ChoiceViewController: UIViewController,UITableViewDelegate,UITableViewData
             tableview.frame = CGRectMake(0, 0, 320, 500)
             tableview.delegate   = self
             tableview.dataSource = self
+            tableview.translatesAutoresizingMaskIntoConstraints = false
             tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             self.view.addSubview(tableview)
+        
+            let views = ["Table":tableview]
+            self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
+            self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[Table]-0-|", options: [], metrics: nil, views: views))
+
         
         
         // Do any additional setup after loading the view.

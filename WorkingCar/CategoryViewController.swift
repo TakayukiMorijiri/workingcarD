@@ -20,6 +20,10 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let btn_back = UIBarButtonItem()
+        btn_back.title = ""
+        self.navigationItem.backBarButtonItem = btn_back
+        
         tableview.frame = CGRectMake(0, 0, 320, 500)
         tableview.delegate   = self
         tableview.dataSource = self
