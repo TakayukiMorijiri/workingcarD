@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
-     var title: UILabel!
+    
      var working_car_Image: UIImageView!
 
     
@@ -19,10 +19,18 @@ class CustomCell: UICollectionViewCell {
         super.init(frame: frame)
         let hoge = UIImage(named: "000.png")
         self.working_car_Image = UIImageView(image: hoge)
-        self.working_car_Image.frame = CGRectMake(3, 10, 100, 80)
+//        self.working_car_Image.frame = CGRectMake(3, 10, 20, 80)
+//        self.working_car_Image.frame.size.width = 
         self.working_car_Image.layer.masksToBounds = true
-        self.layer.cornerRadius = 30
+        self.layer.cornerRadius = 80 
         self.addSubview(working_car_Image)
+        
+//        let views = ["Image":hoge]
+//        self.working_car_Image.addConstraints(
+//            NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[woking_car_Image]-0-|", options: [], metrics: nil, views: views))
+//        self.working_car_Image.addConstraints(
+//            NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[woking_car_Image]-0-|", options: [], metrics: nil, views: views))
+
         
 //        self.title = UILabel()
 //        self.title.text = carTitle[indexPath.row]

@@ -21,7 +21,6 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     
     var working_car_Image = ["000.png","001.png","002.png","003.png","004.png","005.png","006.png","007.png"]
-//    var carTitle = ["ショベル","ダンプ","クレーン","ゴミ収集車","ホイールローダー","ユニック","トレーラー","その他"]
 
     
     
@@ -40,10 +39,13 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .Vertical
-        flowLayout.sectionInset = UIEdgeInsets(top: 10,left: 0,bottom: 20,right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 10,left: 10,bottom: 0,right: 10)
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 0
-        flowLayout.itemSize = CGSizeMake(screenWidth / 3, screenWidth / 3)
+        
+        let itemTotalWidth = screenWidth - 30
+        let itemEachWidth = itemTotalWidth / 2
+        flowLayout.itemSize = CGSizeMake(itemEachWidth, itemEachWidth)
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
         collectionView!.registerClass(CustomCell.self, forCellWithReuseIdentifier: "cell")
@@ -51,6 +53,7 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         collectionView!.delegate = self
         collectionView!.backgroundColor = UIColor.whiteColor()
         view.addSubview(collectionView!)
+        
         }
     
     override func didReceiveMemoryWarning() {
@@ -73,14 +76,20 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         cell.working_car_Image.image = UIImage(named: "00\(indexPath.row).png")
         
-        cell.working_car_Image.layer.cornerRadius = 25
+        cell.working_car_Image.layer.cornerRadius = 80
         cell.working_car_Image.layer.masksToBounds = true
         
-//        cell.title.text = carTitle[indexPath.row]
+        let itemTotalWidth = screenWidth - 30
+        let itemEachWidth = itemTotalWidth / 2
+        
+        cell.frame.size.width = itemEachWidth
+        cell.frame.size.height = itemEachWidth - 10
+        cell.working_car_Image.frame = CGRectMake(0, 0, itemEachWidth, itemEachWidth-10)
+        
         cell.backgroundColor = UIColor.whiteColor()
         cell.layer.borderWidth = 1.0
-        cell.frame.size.width = screenWidth / 3
-        cell.frame.size.height = screenWidth / 3
+//        cell.frame.size.width = screenWidth / 3
+//        cell.frame.size.height = screenHeight / 5
     
         return cell
     }
