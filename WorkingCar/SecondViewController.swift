@@ -19,7 +19,7 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     
     let tableview: UITableView = UITableView()
-    let items = ["あ行","か行","さ行","た行","な行","は行","ま行","や行","ら行","わ行"]
+    let items = ["あ行","か行","さ行","た行","は行","ら行"]
     var selectedIndex = -1
     
     override func viewDidLoad() {
