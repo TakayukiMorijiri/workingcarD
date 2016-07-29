@@ -12,10 +12,10 @@ import UIKit
 
 class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-//    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
-//    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
-//    let AdMobTest:Bool = true
-//    let SimulatorTest:Bool = true
+    let AdMobID = "ca-app-pub-3530000000000000/0123456789"
+    let TEST_DEVICE_ID = "61b0154xxxxxxxxxxxxxxxxxxxxxxxe0"
+    let AdMobTest:Bool = true
+    let SimulatorTest:Bool = true
 
     
     let tableview: UITableView = UITableView()

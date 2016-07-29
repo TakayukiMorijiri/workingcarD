@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import MisterFusion
+import Social
 
 class DetailViewController: UIViewController,UIScrollViewDelegate {
     
     var workingimage: UIImageView!
     var carDictionary = ["category":"","name":"","description":"","image":"","id":0]
     var selectedName = ""
+    
+    var myComposeView: SLComposeViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,6 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         self.view.backgroundColor = UIColor.whiteColor()
     
         let myTextView: UITextView = UITextView(frame: CGRectMake(10, 300, self.view.frame.width - 20, 200))
-
         myTextView.text = carDictionary["description"] as! String
         myTextView.layer.masksToBounds = true
         myTextView.layer.cornerRadius = 15.0
@@ -74,9 +75,29 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         
         self.navigationItem.title = carDictionary["name"] as? String
         
+        let button = UIBarButtonItem()
+        button.image = UIImage(named: "Twitter")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        button.style = UIBarButtonItemStyle.Done
+        button.action = "share:"
+        button.target = self
+        self.navigationItem.setRightBarButtonItems([button], animated: true)
+        
+        
+        
+
+        
         // Do any additional setup after loading the view.
         
         
+        
+    }
+    
+    func share(sender: AnyObject){
+        
+        myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        myComposeView.setInitialText(carDictionary["name"] as? String)
+        myComposeView.addImage(UIImage(named: carDictionary["image"] as! String))
+        self.presentViewController(myComposeView, animated: true, completion: nil)
         
     }
     

@@ -12,7 +12,6 @@
 		5947BCA51D20E5D9007334C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCA41D20E5D9007334C5 /* ViewController.swift */; };
 		5947BCA81D20E5D9007334C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5947BCA61D20E5D9007334C5 /* Main.storyboard */; };
 		5947BCAB1D20E5D9007334C5 /* WorkingCar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCA91D20E5D9007334C5 /* WorkingCar.xcdatamodeld */; };
-		5947BCAD1D20E5D9007334C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5947BCAC1D20E5D9007334C5 /* Assets.xcassets */; };
 		5947BCB01D20E5D9007334C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5947BCAE1D20E5D9007334C5 /* LaunchScreen.storyboard */; };
 		5947BCBB1D20E5D9007334C5 /* WorkingCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCBA1D20E5D9007334C5 /* WorkingCarTests.swift */; };
 		5947BCC61D20E5D9007334C5 /* WorkingCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947BCC51D20E5D9007334C5 /* WorkingCarUITests.swift */; };
@@ -20,11 +19,12 @@
 		594A5EE71D22227F00A84CBD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A5EE61D22227F00A84CBD /* ThirdViewController.swift */; };
 		595D9D491D237B8F003CC334 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D9D481D237B8F003CC334 /* CustomCell.swift */; };
 		595D9D591D25FEF2003CC334 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D9D581D25FEF2003CC334 /* DetailViewController.swift */; };
+		59A64A5F1D4AE72E00EBB8FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A64A5E1D4AE72E00EBB8FC /* Assets.xcassets */; };
 		59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F533A51D279D3A00111E45 /* ChoiceViewController.swift */; };
 		59F533A81D279EDB00111E45 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 59F533A71D279EDB00111E45 /* json */; };
 		59F533AC1D29F8DE00111E45 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */; };
 		59F92F221D2F37DF00523D53 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F92F211D2F37DF00523D53 /* CategoryViewController.swift */; };
-		7B1100D7ADBE847D11DF611C /* Pods_WorkingCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EAC5D6ED31BE34610B7CFC /* Pods_WorkingCar.framework */; };
+		7B1100D7ADBE847D11DF611C /* Pods_WorkingCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EAC5D6ED31BE34610B7CFC /* Pods_WorkingCar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		88CED11F3813D5DED0C5472D /* Pods_WorkingCarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2CFBFD93AC9256321E93BC /* Pods_WorkingCarTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,6 @@
 		5947BCA41D20E5D9007334C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5947BCA71D20E5D9007334C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5947BCAA1D20E5D9007334C5 /* WorkingCar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkingCar.xcdatamodel; sourceTree = "<group>"; };
-		5947BCAC1D20E5D9007334C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5947BCAF1D20E5D9007334C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5947BCB11D20E5D9007334C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5947BCB61D20E5D9007334C5 /* WorkingCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkingCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +68,7 @@
 		595D9D481D237B8F003CC334 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		595D9D581D25FEF2003CC334 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		598546321D35E3B900FBFC89 /* WorkingCar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkingCar-Bridging-Header.h"; sourceTree = "<group>"; };
+		59A64A5E1D4AE72E00EBB8FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59F533A51D279D3A00111E45 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		59F533A71D279EDB00111E45 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
 		59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 		5947BCA11D20E5D9007334C5 /* WorkingCar */ = {
 			isa = PBXGroup;
 			children = (
+				59A64A5E1D4AE72E00EBB8FC /* Assets.xcassets */,
 				5947BCA21D20E5D9007334C5 /* AppDelegate.swift */,
 				5947BCA41D20E5D9007334C5 /* ViewController.swift */,
 				5947BCD31D219AE9007334C5 /* SecondViewController.swift */,
@@ -160,7 +161,6 @@
 				5947BCAE1D20E5D9007334C5 /* LaunchScreen.storyboard */,
 				5947BCB11D20E5D9007334C5 /* Info.plist */,
 				5947BCA91D20E5D9007334C5 /* WorkingCar.xcdatamodeld */,
-				5947BCAC1D20E5D9007334C5 /* Assets.xcassets */,
 				59F533A71D279EDB00111E45 /* json */,
 				598546321D35E3B900FBFC89 /* WorkingCar-Bridging-Header.h */,
 			);
@@ -271,7 +271,7 @@
 				TargetAttributes = {
 					5947BC9E1D20E5D9007334C5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = BR7LUF82JG;
+						DevelopmentTeam = E5628Z5F5N;
 					};
 					5947BCB51D20E5D9007334C5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -309,8 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5947BCB01D20E5D9007334C5 /* LaunchScreen.storyboard in Resources */,
-				5947BCAD1D20E5D9007334C5 /* Assets.xcassets in Resources */,
 				59F533A81D279EDB00111E45 /* json in Resources */,
+				59A64A5F1D4AE72E00EBB8FC /* Assets.xcassets in Resources */,
 				5947BCA81D20E5D9007334C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +586,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TAKAYUKI MORIJIRI (E5628Z5F5N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -601,6 +602,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "32e670c4-5787-4de3-b4e1-9dc1dbf740c8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -627,6 +629,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WorkingCar/WorkingCar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -649,6 +652,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WorkingCar/WorkingCar-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
