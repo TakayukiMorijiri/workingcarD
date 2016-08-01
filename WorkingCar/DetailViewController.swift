@@ -82,20 +82,13 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         button.target = self
         self.navigationItem.setRightBarButtonItems([button], animated: true)
         
-        
-        
-
-        
         // Do any additional setup after loading the view.
-        
-        
-        
     }
     
     func share(sender: AnyObject){
         
         myComposeView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        myComposeView.setInitialText(carDictionary["name"] as? String)
+        myComposeView.setInitialText((carDictionary["name"] as? String)! + "見たよ！")
         myComposeView.addImage(UIImage(named: carDictionary["image"] as! String))
         self.presentViewController(myComposeView, animated: true, completion: nil)
         

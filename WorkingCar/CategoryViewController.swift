@@ -76,9 +76,7 @@ class CategoryViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         let detailVC:DetailViewController = DetailViewController()
         self.navigationController!.pushViewController(detailVC, animated: true)
-        //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        //        print("うわああああああああああああ")
-        
+                
         selectedName = car_List[indexPath.row]["name"] as! String
         detailVC.selectedName = selectedName
         
