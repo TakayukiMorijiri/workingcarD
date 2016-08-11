@@ -60,11 +60,21 @@ class ViewController: UIViewController {
         btn1.translatesAutoresizingMaskIntoConstraints = true
         btn1.layer.cornerRadius = 20
         btn1.frame = CGRectMake(0, 0, 200, 60)
-        btn1.layer.position = CGPoint(x:self.view.frame.size.width/2, y: 350)
+        btn1.layer.position = CGPoint(x:self.view.frame.size.width/2, y: 300)
         btn1.backgroundColor = UIColor.orangeColor()
         btn1.setTitle("アイコン", forState: .Normal)
         btn1.addTarget(self, action: "gotoThird:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
+        
+        let btn2: UIButton = UIButton()
+        btn2.translatesAutoresizingMaskIntoConstraints = true
+        btn2.backgroundColor = UIColor.brownColor()
+        btn2.layer.cornerRadius = 20
+        btn2.frame = CGRectMake(0, 0, 200, 60)
+        btn2.layer.position = CGPoint(x: self.view.frame.size.width/2, y: 400)
+        btn2.setTitle("カメラ", forState: .Normal)
+        btn2.addTarget(self, action: "", forControlEvents: .TouchUpInside)
+        self.view.addSubview(btn2)
         
         
         let Image = UIImageView()
@@ -73,7 +83,7 @@ class ViewController: UIViewController {
         let BoundSize_w: CGFloat = UIScreen.mainScreen().bounds.width
         let BoundSize_h: CGFloat = UIScreen.mainScreen().bounds.height
         self.view.addLayoutSubview(Image,andConstraints:
-            Image.Top |+| 400,
+            Image.Top |+| 450,
             Image.Bottom |-| 50,
             Image.Right |+| 0,
             Image.Left |-| 0
