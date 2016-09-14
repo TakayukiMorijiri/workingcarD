@@ -20,6 +20,7 @@
 		595D9D491D237B8F003CC334 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D9D481D237B8F003CC334 /* CustomCell.swift */; };
 		595D9D591D25FEF2003CC334 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D9D581D25FEF2003CC334 /* DetailViewController.swift */; };
 		59A64A5F1D4AE72E00EBB8FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A64A5E1D4AE72E00EBB8FC /* Assets.xcassets */; };
+		59A96BB31D8829CE003C66C0 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A96BB21D8829CD003C66C0 /* MovieViewController.swift */; };
 		59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F533A51D279D3A00111E45 /* ChoiceViewController.swift */; };
 		59F533A81D279EDB00111E45 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 59F533A71D279EDB00111E45 /* json */; };
 		59F533AC1D29F8DE00111E45 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */; };
@@ -69,6 +70,7 @@
 		595D9D581D25FEF2003CC334 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		598546321D35E3B900FBFC89 /* WorkingCar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkingCar-Bridging-Header.h"; sourceTree = "<group>"; };
 		59A64A5E1D4AE72E00EBB8FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59A96BB21D8829CD003C66C0 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		59F533A51D279D3A00111E45 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		59F533A71D279EDB00111E45 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
 		59F533AB1D29F8DE00111E45 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				59F533A51D279D3A00111E45 /* ChoiceViewController.swift */,
 				59F92F211D2F37DF00523D53 /* CategoryViewController.swift */,
 				595D9D581D25FEF2003CC334 /* DetailViewController.swift */,
+				59A96BB21D8829CD003C66C0 /* MovieViewController.swift */,
 				5947BCA61D20E5D9007334C5 /* Main.storyboard */,
 				5947BCAE1D20E5D9007334C5 /* LaunchScreen.storyboard */,
 				5947BCB11D20E5D9007334C5 /* Info.plist */,
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F92F221D2F37DF00523D53 /* CategoryViewController.swift in Sources */,
+				59A96BB31D8829CE003C66C0 /* MovieViewController.swift in Sources */,
 				59F533A61D279D3A00111E45 /* ChoiceViewController.swift in Sources */,
 				5947BCD41D219AE9007334C5 /* SecondViewController.swift in Sources */,
 				5947BCAB1D20E5D9007334C5 /* WorkingCar.xcdatamodeld in Sources */,
